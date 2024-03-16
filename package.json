@@ -7,11 +7,23 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "node -e \"console.log('Hello, test')\"",
+    "lint": "biome lint ./src/*",
+    "fix": "biome format ./src/**/* --write",
+    "check": "biome check --apply ./src/**/*",
+    "prepare": "husky"
   },
   "dependencies": {
-    "astro": "^4.5.5",
     "@astrojs/check": "^0.5.9",
+    "astro": "^4.5.5",
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.1",
+    "@commitlint/cli": "^19.2.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "husky": "^9.0.11",
+    "npm-run-all2": "^6.1.2"
   }
 }
