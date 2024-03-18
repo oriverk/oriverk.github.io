@@ -18,18 +18,25 @@
       hsl(210, 100%, 45%) 100%);
 }
 
-.container {
-  max-inline-size: 768px;
-  margin-inline: auto;
-  padding-inline: 1rem;
+html {
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-color: rgb(26 32 44);
+  color: rgb(250 250 250);
+}
+
+a { 
+  color: rgb(250 250 250);
+
+  &:hover {
+    color: rgb(0 225 238);
+  }
 }
 
 footer {
   text-align: center;
-}
-
-html {
-  font-family: system-ui, sans-serif;
 }
 
 table {
@@ -37,9 +44,16 @@ table {
 }
 
 td {
-  padding: 0.25rem 0.5rem;
+  padding-block: .25rem;
+  padding-inline: .5rem;
   border: 1px solid #ccc;
   text-align: center;
+}
+
+.container {
+  max-inline-size: 768px;
+  margin-inline: auto;
+  padding-inline: 1rem;
 }
 
 .icon {
