@@ -16,8 +16,8 @@ const { origin, href } = Astro.url;
 const { frontmatter } = Astro.props;
 const { title, description, author, update, create, image, noindex } =
   frontmatter;
-const ogImage = image || new URL("square512x.webp", origin).toString();
-const siteName = "oriverk.dev";
+const ogImage = image || new URL("square512x.png", origin).toString();
+const siteName = "oriverk.github.io";
 const siteTitle = title ? `${title} | ${siteName}` : siteName;
 const thisYear = new Date().getFullYear();
 ---
@@ -31,10 +31,9 @@ const thisYear = new Date().getFullYear();
     {noindex && <meta name="robots" content="noindex" />}
     <meta name="viewport" content="width=device-width" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
-    <link rel="canonical" href="https://oriverk.dev/" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="canonical" href={href} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/square192x.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta name="theme-color" content="#00e1ee" />
